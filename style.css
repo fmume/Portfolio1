@@ -1,0 +1,390 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+/*----------------Header------------------*/
+
+#header {
+    background: #e9e8e6;
+    box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+    z-index: 997;
+    padding: 15px 0;
+  }
+  
+  #header .logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #header .logo a {
+    color: #222222;
+  }
+  
+  
+  @media (max-width: 992px) {
+    #header .logo {
+      font-size: 28px;
+    }
+  }
+  
+  /*---------------------------Navigation Menu------------------------*/
+
+  .nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-menu > ul {
+    display: flex;
+  }
+  
+  .nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+  }
+  
+  .nav-menu a {
+    display: block;
+    position: relative;
+    color: #888888;
+    transition: 0.3s;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+  }
+  
+  .nav-menu > ul > li > a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #34b7a7;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+    visibility: visible;
+    width: 25px;
+  }
+  
+  .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: #222222;
+  }
+  
+  /*-------------------------Header Social Links-------------------------------*/
+
+  .header-social-links {
+    padding-left: 20px;
+  }
+  
+  .header-social-links a {
+    color: #222222;
+    padding-left: 6px;
+    display: inline-block;
+    line-height: 1px;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+  
+  .header-social-links a:hover {
+    color: #34b7a7;
+  }
+  
+  @media (max-width: 992px) {
+    .header-social-links {
+      padding: 0 48px 0 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+      .header-social-links {
+          display: none;
+      }
+  }
+
+  /*---------------------------Toggler--------------------*/
+
+  .navbar-toggler {
+      position: absolute;
+      right: 0;
+      bottom: 10%;
+  }
+
+  #navbarMenu {
+    position: absolute;
+    right: 0;
+}
+
+  @media (min-width: 768px) {
+    #navbarMenu {
+      display: none !important;
+    }
+
+    .navbar-toggler {
+        display: none !important;
+    }
+  }
+  
+  #navbarMenu > ul > li {
+    padding: 10px 10px 10px 28px;
+    list-style: none;
+  }
+  
+  #navbarMenu a {
+    color: #888888;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+
+  #navbarMenu a:hover {
+      color: #34b7a7;
+      text-decoration: underline;
+  }
+
+  /*----------------------HERO SECTION--------------------*/
+
+ .image {
+     width: 100%;
+     background-size: cover;
+     opacity: 0.2;
+ }
+
+  #hero .container {
+    padding-top: 70px;
+    position: absolute;
+    left: 10%;
+  }
+
+  #hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #222222;
+  }
+  
+  #hero h2 {
+    color: #6f6f6f;
+    margin: 10px 0 0 0;
+    font-size: 22px;
+  }
+
+   #hero .btn-about {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    margin-top: 30px;
+    color: #fff;
+    background: #34b7a7;
+  }
+  
+ #hero .btn-about:hover {
+    background: #3dc8b7;
+  }
+
+  @media (max-width: 576px) {
+
+    #hero h1 {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 56px;
+        color: #222222;
+        position: relative;
+        right: 10%;
+      }
+      
+      #hero h2 {
+        color: #6f6f6f;
+        margin: 10px 0 0 0;
+        font-size: 20px;
+        position: relative;
+        right: 10%;
+      }
+
+      #hero .btn-about {
+          position: relative;
+          right: 10%;
+      }
+  }
+
+  @media (min-width: 1200px) {
+    #hero h1 {
+        margin: 0;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        color: #222222;
+        position: relative;
+        left: 20%;
+        top: 20%;
+      }
+      
+      #hero h2 {
+        color: #6f6f6f;
+        margin: 10px 0 0 0;
+        font-size: 22px;
+        position: relative;
+        left: 20%;
+        top: 20%;
+      }
+
+      #hero .btn-about {
+        position: relative;
+        left: 20%;
+        top: 20%;
+      }
+  }
+
+  /*--------------------------ABOUT ME SECTION--------------------*/
+
+  section {
+      padding: 60px 0;
+  }
+
+  .about-title {
+      text-align: center;
+      padding-bottom: 30px;
+  }
+
+  .about-title h2 {
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+  }
+  
+  .about-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #34b7a7;
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+
+  .about-title p {
+      margin-bottom: 0;
+  }
+
+  .content h3 {
+      font-weight: 700;
+      font-size: 26px;
+      color: #555555;
+  }
+
+  .content p {
+      margin-bottom: 0;
+  }
+
+
+  /*--------------------------PORTFOLIO SECTION-----------------*/
+
+  .portfolio-item {
+      margin-bottom: 30px;
+  }
+
+  .portfolio-item a:hover {
+      opacity: 0.5;
+      
+  }
+
+  /*------------------------------CONTACT ME SECTION-----------------------*/
+
+  #contact {
+      padding-top: 20px;
+      width: 100%;
+      background-color: #e9e8e6;
+  }
+
+  #contact i {
+    font-size: 20px;
+    color: #34b7a7;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #effbf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
+
+  #contact h4 {
+      padding: 0 0 0 60px;
+      margin-bottom: 0;
+      font-size: 22px;
+      font-weight: 600;
+      color: #222222;
+      
+  }
+
+  #contact p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #555555;
+  }
+
+  .email, .phone {
+      margin-top: 40px;
+  }
+
+  form {
+      margin-top: 30px;
+  }
+
+  form .btn-about {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    background: #34b7a7;
+    position: relative;
+    left: 40%;
+    
+  }
+  
+ form .btn-about:hover {
+    background: #3dc8b7;
+  }
+
+  @media (max-width:576px) {
+    form .btn-about {
+        left: 30%;
+    }
+  }
+
+  
+  
+  
+  
+  
+  
+
